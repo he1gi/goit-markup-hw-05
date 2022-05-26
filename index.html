@@ -32,16 +32,16 @@
           </ul>
         </nav>
         <ul class="auth-nav list">
-          <li class="item">
-            <a href="info@devstudio.com" class="link">
+          <li class="auth-nav-item">
+            <a href="info@devstudio.com" class="auth-nav-link">
               <svg class="icon-envelope" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="link">
+          <li class="auth-nav-item">
+            <a href="tel:+380961111111" class="auth-nav-link">
               <svg class="icon-smartphone" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
@@ -57,7 +57,7 @@
       <section class="hero section">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="hero-button" type="button">Заказать услугу</button>
+          <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
       <!-- cекция с особенностями -->
@@ -118,31 +118,40 @@
           <h2 class="activity-title">Чем мы занимаемся</h2>
           <ul class="list activity-wrapper">
             <li class="activity-item">
-              <img
-                class="activity-picture"
-                src="./images/box1.jpg"
-                alt="Фронтенд разработка"
-                width="370"
-                height="294"
-              />
+              <div class="activity-wrap">
+                <img
+                  class="activity-picture"
+                  src="./images/box1.jpg"
+                  alt="Фронтенд разработка"
+                  width="370"
+                  height="294"
+                />
+                <p class="activity-description">Десктопные приложения</p>
+              </div>
             </li>
             <li class="activity-item">
-              <img
-                class="activity-picture"
-                src="./images/box2.jpg"
-                alt="Разработка пользовательского интерфейса"
-                width="370"
-                height="294"
-              />
+              <div class="activity-wrap">
+                <img
+                  class="activity-picture"
+                  src="./images/box2.jpg"
+                  alt="Разработка пользовательского интерфейса"
+                  width="370"
+                  height="294"
+                />
+                <p class="activity-description">Мобильные приложения</p>
+              </div>
             </li>
             <li class="activity-item">
-              <img
-                class="activity-picture"
-                src="./images/box3.jpg"
-                alt="Дизайн продукта"
-                width="370"
-                height="294"
-              />
+              <div class="activity-wrap">
+                <img
+                  class="activity-picture"
+                  src="./images/box3.jpg"
+                  alt="Дизайн продукта"
+                  width="370"
+                  height="294"
+                />
+                <p class="activity-description">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -434,5 +443,16 @@
         </div>
       </div>
     </footer>
+    <!-- модальное окно -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close-button" type="button" data-modal-close>
+          <svg class="modal-close-icon" width="11" height="11">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
